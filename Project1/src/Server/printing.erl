@@ -4,8 +4,8 @@
 
 print()->
   receive
-    print->
-      io:fwrite("mined~n");
+    {coin,Str}->
+      io:fwrite("~p~n",[Str]);
     printspidey ->
       io:fwrite("spidey~n")
   end,

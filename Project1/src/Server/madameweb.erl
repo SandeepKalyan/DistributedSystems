@@ -1,9 +1,10 @@
 -module(madameweb).
 
--export([start_server/0,spawn_server_actor_printing/0,spawn_server_actor_mining/2]).
+-export([start_server/1,spawn_server_actor_printing/0,spawn_server_actor_mining/2]).
 
-createWeb()->
-  net_kernel:start([list_to_atom("madame@sandy.")]),
+createWeb(IP)->
+  Str = string:concat("madame@",IP),
+  net_kernel:start([list_to_atom(Str)]),
   erlang:set_cookie(erlang:node(),spiderman),
   NodeGenerated = erlang:node(),
   NodesGeneratedList = atom_to_list(NodeGenerated),
@@ -34,16 +35,15 @@ receive_clients() ->
   end,
   receive_clients().
 
-start_server() ->
+start_server(IP) ->
   register(madameweb,self()),
-  NodeName=createWeb(),
+  NodeName=createWeb(IP),
   io:fwrite(NodeName),
   PrintingCheck = spawn_server_actor_printing(),
   io:fwrite("~nPrinting actor spawn check: ~p~n",[PrintingCheck]),
   spawn_server_actor_mining(4,5),
   io:fwrite("~p~n",[self()]),
   receive_clients().
-
 
 
 
