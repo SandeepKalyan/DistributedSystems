@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="java">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Erlang OTP/lib/jinterface-1.13.1/doc/html/java/member-search-index.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Erlang OTP/lib/jinterface-1.13.1/doc/html/java/package-search-index.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Erlang OTP/lib/jinterface-1.13.1/doc/html/java/type-search-index.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="OtpErlang">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Erlang OTP/lib/jinterface-1.13.1/priv/OtpErlang.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
