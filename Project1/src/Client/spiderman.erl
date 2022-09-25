@@ -37,7 +37,7 @@ spawn_server_actor_mining(_,0)->
 spawn_server_actor_mining(_NumberOfZeros,NumberOfActors)->
   PID=spawn(spideymining,mine,[_NumberOfZeros]),
   PID!something,
-  io:fwrite("~p~n",[_NumberOfZeros]),
+  io:fwrite("Thread spawned to mine for leading zeros: ~p~n",[_NumberOfZeros]),
   spawn_server_actor_mining(_NumberOfZeros,NumberOfActors-1).
 
 venom_kill()->
@@ -52,5 +52,5 @@ myprogram() ->
   contact_madame(),
   ActorPrintingID = receive_printing_actor_id(),
   io:fwrite("~p~n",[ActorPrintingID]),
-  spawn_server_actor_mining(4,5),
+  spawn_server_actor_mining(4,30),
   venom_kill().

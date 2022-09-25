@@ -1,0 +1,7 @@
+This File Contains necessary Information about the CPU time reporting and the CPU Utilization Co-efficient.
+**********************************************************************************************************.
+Start Wall Time : 107
+Start Run Time : 250
+End Wall Time : 30127
+End Run Time : 444718
+CPU Utilization Ratio : 14.805729513657562
